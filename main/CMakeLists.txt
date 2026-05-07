@@ -1,0 +1,10 @@
+idf_component_register(SRCS "main.c"
+                            "indicator.c"
+                            "fm225.c"
+                            "i2c_devices/my_i2c.c"
+                            "i2c_devices/pn532.c"
+                            "i2c_devices/lcd1602.c"
+                            "cloud_net/wifi_station.c"
+                            "cloud_net/my_mqtt.c"
+                       INCLUDE_DIRS "." "i2c_devices" "cloud_net"
+                       REQUIRES esp_driver_gpio esp_adc esp_driver_i2c esp_driver_uart esp_wifi nvs_flash esp-tls)
